@@ -1,0 +1,13 @@
+
+<p>Sort by</p>
+<select ng-model="$ctrl.order">
+	<option value="age">Newest</option>
+	<option value="name">Alpha</option>
+</select>
+<ul>
+	<li ng-repeat="phone in $ctrl.phones | orderBy:$ctrl.order">
+		<a>{{phone.name}}</a>
+		<img ng-src="{{phone.imageUrl}}" width="50%">
+	</li>
+	
+</ul>
